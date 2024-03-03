@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Check for flags
+if [[ $1 = "-SWMF" ]]; then
+    cd ../SWMF_IDL/IDL/General; ../../bin/fl64_cmd idlrc
+elif [[ $1 = "-b" ]]; then
+    echo "Action B initiated"
+else
+    echo "Please provide a valid flag (-a or -b)"
+fi

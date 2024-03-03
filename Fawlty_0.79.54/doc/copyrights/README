@@ -1,0 +1,296 @@
+
+- GCC runtime libraries (support, C++, Fortran)
+  homepage: http://gcc.gnu.org/
+  license: gpl-3.txt and gcc-runtime.txt
+
+- BLAS
+  homepage: http://www.netlib.org/blas
+  license: freely available
+
+- CBLAS
+  homepage: http://www.netlib.org/blas/blast-forum
+  license: freely available
+
+- XBLAS
+  homepage: http://www.netlib.org/xblas
+  license: xblas.txt
+
+- OPENBLAS
+  homepage: http://www.openblas.net
+  license: openblas.txt
+
+- LAPACK
+  homepage: http://www.netlib.org/lapack
+  license: lapack.txt
+
+- SLATEC
+  homepage: http://www.netlib.org/slatec
+  license: freely available
+
+- ODEPACK
+  homepage: http://netlib.org/odepack
+  license: public domain
+
+- pocketfft
+  homepage: https://gitlab.mpcdf.mpg.de/mtr/pocketfft
+  license: pocketfft.txt
+
+- dcdflib
+  homepage: http://www.netlib.org/random/
+  license: freely available
+
+- ncurses
+  homepage: http://ftp.gnu.org/gnu/ncurses
+  license: ncurses.txt
+
+- EasyBMP
+  homepage: http://easybmp.sourceforge.net
+  license: easybmp.txt
+
+- JPEG
+  homepage: http://www.ijg.org/files/jpegsrc.v9d.tar.gz
+  license: jpeg.txt
+
+- JPEG-TURBO
+  homepage: https://libjpeg-turbo.org/
+  license: jpeg-turbo.txt
+
+- PNG
+  homepage: http://www.libpng.net
+  license: png.txt
+
+- TIFF
+  homepage: http://www.remotesensing.org/libtiff
+  license: tiff.txt
+
+- GIF
+  homepage: http://giflib.sourceforge.net/
+  license: giflib.txt
+
+- WEBP
+  homepage: https://developers.google.com/speed/webp/
+  license: webp.txt
+
+- zlib
+  homepage: http://www.zlib.org
+  license: zlib.txt
+
+- bzip2
+  homepage: http://www.bzip.org
+  license: bzip2.txt
+
+- zstd
+  homepage: https://github.com/facebook/zstd
+  license: zstd.txt
+
+- liblzma
+  homepage: https://tukaani.org/xz/
+  license: public domain
+
+- brotli
+  homepage: https://github.com/google/brotli
+  license: brotli.txt
+
+- lz4/lib
+  homepage: http://www.lz4.org
+  license: lz4.txt
+
+- libb2
+  homepage: https://github.com/BLAKE2/libb2
+  license: b2.txt
+
+- aec
+  homepage: https://gitlab.dkrz.de/k202009/libaec
+  license: aec.txt
+
+- CDF
+  homepage: http://cdf.gsfc.nasa.gov
+  license: cdf.txt
+
+- netCDF
+  homepage: http://www.unidata.ucar.edu/software/netcdf/
+  license: netcdf.txt
+
+- HDF4
+  homepage: http://www.hdfgroup.org/products/hdf4
+  license: hdf4.txt
+
+- HDF5
+  homepage: http://www.hdfgroup.org/products/hdf5
+  license: hdf5.txt
+
+- glob from OpenBSD
+  homepage: http://www.openbsd.org
+  license: glob.txt
+
+- fnmatch from OpenBSD
+  homepage: http://www.openbsd.org
+  license: fnmatch.txt
+
+- regex from OpenBSD
+  homepage: http://www.openbsd.org
+  license: regex.txt
+
+- PCRE2
+  homepage: http://pcre.org
+  license: pcre2.txt
+
+- libedit
+  homepage: http://www.thrysoee.dk/editline
+  license: edit.txt
+
+- wineditline
+  homepage: http://mingweditline.sourceforge.net/
+  license: wineditline.txt
+
+- libexpat
+  homepage: http://expat.sourceforge.net/
+  license: expat.txt
+
+- freetype
+  homepage: http://www.freetype.org/
+  license: freetype.txt
+
+- fontconfig
+  homepage: http://fontconfig.org/
+  license: fontconfig.txt
+
+- harfbuzz
+  homepage: https://github.com/harfbuzz/harfbuzz
+  license: harfbuzz.txt
+
+- Qt
+  homepage: http://qt-project.org/
+  license: lgpl-2.1.txt
+
+- libffi
+  homepage: http://sourceware.org/libffi
+  license: ffi.txt
+
+- dyncall
+  homepage: http://www.dyncall.org/
+  license: dyncall.txt
+
+- qhull
+  homepage: http://www.qhull.org
+  license: qhull.txt
+
+- trio
+  homepage: http://daniel.haxx.se/trio/
+  license: trio.txt
+
+- MT19937
+  homepage: http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html
+  license: mt19937.txt
+
+- random number generators
+  homepage: http://www.johndcook.com/stand_alone_code.html
+  license: public domain
+
+- boost librand
+  homepage: http://www.boost.org
+  license: boost.txt
+
+- libcerf
+  homepage: http://apps.jcns.fz-juelich.de/doku/sc/libcerf
+  license: cerf.txt
+
+- cmpfit
+  homepage: http://cow.physics.wisc.edu/~craigm/idl/cmpfit.html
+  license: cmpfit.txt
+
+- CXFORM
+  homepage: http://nssdcftp.gsfc.nasa.gov/selected_software/coordinate_transform
+  license: public domain
+
+- FFMPEG
+  homepage: http://ffmpeg.mplayerhq.hu
+  license: lgpl-2.1.txt
+
+- PortableXDR library part
+  homepage: http://people.redhat.com/~rjones/portablexdr/
+  license: lgpl-2.1.txt
+
+- PROJ.4
+  homepage: https://github.com/OSGeo/proj.4
+  licemse: proj4.txt
+
+- CIA World DataBank II
+  homepage: https://www.evl.uic.edu/pape/data/WDB
+  license: public domain
+
+- OpenSSL
+  homepage: https://www.openssl.org/
+  license: openssl.txt
+
+- librhash
+  homepage: https://github.com/rhash/RHash
+  license: rhash.txt
+
+- libssh2
+  homepage: http://www.libssh2.org/
+  license: libssh2.txt
+
+- curl
+  homepage: https://curl.haxx.se/
+  license: curl.txt
+
+- libpsl
+  homepage: https://github.com/rockdaboot/libpsl
+  license: psl.txt
+
+- scipy
+  homepage: https://scipy.org/
+  license: scipy.txt
+
+- uriparser
+  homepage: http://uriparser.sourceforge.net/
+  license: uriparser.txt
+
+- cacert.pem
+  homepage: https://curl.haxx.se/ca/cacert.pem
+  license: mpl_2.0.txt
+
+- Adobe Postscript font metrics
+  homepage: http://mirrors.ctan.org/fonts/adobe/afm/Adobe-Core35_AFMs-314.tar.gz
+  license: adobe_ps_afm.txt
+
+- LittleCMS
+  homepage: http://www.littlecms.com/
+  license: lcms.txt
+
+- libuuid
+  homepage: https://sourceforge.net/projects/libuuid/
+  license: uuid.txt
+
+- jansson
+  homepage: https://github.com/akheron/jansson
+  license: jansson.txt
+
+- apache xerces-c
+  homepage: https://xerces.apache.org/
+  license: apache.txt
+
+- libarchive
+  homepage: https://github.com/libarchive/libarchive
+  license: libarchive.txt
+
+- libnsl
+  homepage: https://github.com/thkukuk/libnsl/
+  license: lgpl-2.1.txt
+
+- fast_float
+  homepage: https://github.com/lemire/fast_float
+  license: fast_float.txt
+
+- md4c
+  homepage: https://github.com/mity/md4c
+  license: md4c.txt
+
+- libtirpc
+  homepage: git://git.linux-nfs.org/projects/steved/libtirpc.git
+  license: libtirpc.txt
+
+- whereami
+  homepage: https://github.com/gpakosz/whereami
+  license: whereami.txt
