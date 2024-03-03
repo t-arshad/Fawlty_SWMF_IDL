@@ -1,0 +1,4 @@
+sudo touch;
+cd ~/Apps;
+rm -rf Fawlty*;
+sudo rm -rf /usr/bin/fawlty;
