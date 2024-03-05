@@ -132,11 +132,12 @@ pro set_default_values
 
 ; Animation parameters for the movie
   common animate_param, $
-     firstpict, dpict, npictmax, savemovie, wsubtract, timediff, pictdiff, $
+     firstpict, dpict, npictmax, savemovie, showmovie, wsubtract, timediff, pictdiff, $
      videosave, videofile, videorate, videoobject, videostream, videotime
   firstpict=1        ; a scalar or array (per file) of the index of first frame
   dpict=1            ; a scalar or array (per file) of distance between frames
   npictmax=500       ; maximum number of frames in an animation
+  showmovie='y'      ; show movie with Xinteranimate if possible
   savemovie='n'      ; save animation frames into ps/png/tiff/bmp/jpeg files
                      ; or into a 'mov/mp4/avi' video file.
   wsubtract=0        ; Array subtracted from w during animation
@@ -1091,6 +1092,12 @@ pro animate_data
      npict1 = 1
   endelse
 
+  if !d.name eq 'X' and savemovie ne 'ps' then begin
+     ;; open X window to get the size
+     if !d.window lt 0 then window
+     wshow
+  endif
+
   if videosave then begin
      videoobject = IDLffVideoWrite(videofile+'.'+savemovie)
      videostream = videoobject.AddVideoStream(!d.x_size,!d.y_size,videorate)
@@ -1099,11 +1106,7 @@ pro animate_data
      if savemovie eq 'ps' then set_plot,'PS',/INTERPOLATE
   endelse
 
-  doanimate= npict gt npict1 and !d.name eq 'X'
-  if !d.name eq 'X' then begin
-     if !d.window lt 0 then window
-     wshow
-  endif
+  doanimate= npict gt npict1 and !d.name eq 'X' and showmovie eq 'y'
   if doanimate then begin
     if xregistered("XInterAnimate") then xinteranimate, /close
     xinteranimate,set=[!d.x_size,!d.y_size,(npict-1)/npict1+1]
@@ -1540,7 +1543,7 @@ pro slice_data_restore
 end
 
 ;=============================================================================
-pro read_log_data
+pro read_log_data, scalar=scalar
 
 ; Read the log data from 1, 2, or 3 files into the wlog, wlog1, wlog2 arrays
 ; Store the names of the variables into wlognames, wlognames1 and wlognames2
@@ -1575,7 +1578,7 @@ pro read_log_data
   
   ; First time read the row names into wlogrownames
   get_log, logfilenames(0), wlog,  wlognames,  logtime, timeunit, $
-           wlogrownames, /verbose
+           wlogrownames, /verbose, scalar=scalar
 
   if nlogfile ge 2 then get_log, $
      logfilenames(1), wlog1, wlognames1, logtime1, timeunit, verbose='1'
@@ -5820,7 +5823,7 @@ end
      
 ;=============================================================================
 pro get_log, source, wlog, wlognames, logtime, timeunit, headlines=headlines,$
-             rownames, verbose=verbose
+             rownames, verbose=verbose, scalar=scalar
 
 ; Read the log data from source. If source is an integer, it is 
 ; interpreted as a unit number. If it is a string, it is taken as the
@@ -5934,6 +5937,8 @@ pro get_log, source, wlog, wlognames, logtime, timeunit, headlines=headlines,$
   ;; If verbose is a string set the index string to it
   if size(verbose,/type) eq 7 then index=verbose else index=''
 
+  if not keyword_set(scalar) then scalar = 0
+  
   ;; Use buffers for efficient reading
   line  = ''
   firstcolumn = 0 ; first column with numbers
@@ -5969,7 +5974,7 @@ pro get_log, source, wlog, wlognames, logtime, timeunit, headlines=headlines,$
         if not isheader then begin
            n = 0
            string_to_array, line, numbers, n
-           if n le 1 then isheader=1
+           if n le 1 and not scalar then isheader=1
         endif
         
         if isheader then begin
