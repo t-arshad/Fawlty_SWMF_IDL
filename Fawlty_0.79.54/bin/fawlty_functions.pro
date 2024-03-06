@@ -12,21 +12,29 @@ savemovie='ps'
 animate_data
 savemovie='n'
 cd, 'Movie'
+
+
+;print,''
+;print,'------------------------'
+;print,'Fixing PostScript Files'
+;spawn, 'convert ./*.ps -rotate 270 ./PS.ps'
+
+
 print,''
-print,'------------------------'
-print,'Merging PostScript Files'
-spawn, 'convert ./*.ps -rotate 270 ./PS.ps'
+print,'--------------'
+print,'Generating GIF'
+spawn, 'convert ./*.ps -rotate 270 ./GIF.gif'
+
+
+print,''
+print,'--------------'
+print,'Generating PDF'
+spawn, 'convert ./GIF.gif ./PDF.pdf'
+
+
 spawn,'mv ./PS.ps ./PS.pss'
 spawn,'rm -rf *.ps'
 spawn,'mv ./PS.pss ./PS.ps'
-print,''
-print,'------------------------'
-print,'Converting Merged PostScript File to GIF'
-spawn, 'convert ./PS.ps ./GIF.gif'
-;print,''
-;print,'------------------------'
-;print,'Converting Merged PostScript File to PDF'
-;spawn, 'convert ./PS.ps ./PDF.pdf'
 cd, '..'
 print,''
 print,'----'
