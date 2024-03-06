@@ -1,6 +1,7 @@
 cd, '~/Apps/Fawlty*/Fawlty*/SWMF_IDL/IDL/General', CURRENT=olddir
 @idlrc
 cd, olddir
+filename='*.outs'
 showmovie='n'
 
 
