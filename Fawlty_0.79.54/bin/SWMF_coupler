@@ -1,0 +1,9 @@
+cd, '~/Apps/Fawlty*/Fawlty*/SWMF_IDL/IDL/General', CURRENT=olddir
+@idlrc
+cd, olddir
+showmovie='n'
+
+
+
+
+

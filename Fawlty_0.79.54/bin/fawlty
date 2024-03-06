@@ -2,7 +2,7 @@
 
 # Check for flags
 if [[ $1 = "-SWMF" ]]; then
-    cd ~/Apps/Fawlty*/Fawlty*/SWMF_IDL/IDL/General; ../../../bin/fl64_cmd idlrc
+~/Apps/Fawlty*/Fawlty*/bin/fl64_cmd ~/Apps/Fawlty*/Fawlty*/bin/SWMF_coupler
 elif [[ $1 = "-b" ]]; then
     echo "Action B initiated"
 else
