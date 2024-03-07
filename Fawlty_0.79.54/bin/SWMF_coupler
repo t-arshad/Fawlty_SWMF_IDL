@@ -5,7 +5,7 @@ cd, '~/Apps/Fawlty*/Fawlty*/bin'
 cd, olddir
 filename='*.outs'
 showmovie='n'
-
+loadct, 39
 
 
 
