@@ -1,0 +1,32 @@
+rm -rf *.png;
+rm -rf *.mp4;
+echo ''
+echo ''
+echo ''
+echo ''
+echo '-------------'
+echo 'Making Movie'
+echo '-------------'
+echo ''
+echo ''
+echo ''
+echo ''
+parallel mogrify -rotate 270 -density 300 -format png ::: *.ps;
+ffmpeg -i %4d.png -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" video.mp4;
+rm -rf *.png;
+rm -rf *.ps;
+echo ''
+echo ''
+echo ''
+echo ''
+echo '-------------'
+echo '    Done'
+echo '-------------'
+echo ''
+echo ''
+echo ''
+echo ''
+echo         '-------------------------------------------'
+echo         'Movie Generated - Press Enter To Continue'
+echo         '-------------------------------------------'
+read ans
