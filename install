@@ -6,3 +6,6 @@ git clone git@github.com:t-arshad/Fawlty_SWMF_IDL.git;
 cd Fawlty*;
 ./install_dependencies;
 sudo ln -s ~/Apps/Fawlty*/Fawlty*/bin/fawlty /usr/bin;
+cd Fawlty*;
+cd SWMF_IDL;
+./clone_idl_swmf;

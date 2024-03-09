@@ -1,0 +1,3 @@
+git clone https://github.com/SWMFsoftware/share.git
+mv ./share/IDL ./IDL
+rm -rf share
