@@ -1,11 +1,7 @@
 pro make_movie,quality
-
 ;quality: 0 will go .ps -> .png -> .mov   - High Quality
 ;quality: 1 will go .png -> .mov   - Low Quality
 common animate_param
-
-
-
 spawn,'mkdir Movie'
 cd, 'Movie' 
 spawn, 'rm -rf *'
@@ -37,5 +33,5 @@ spawn,'uname',uname
 if strpos(uname[0],'IRIX')  ge 0 then device,retain=2,pseudo_color=8
 if strpos(uname[0],'Linux') ge 0 then device,decompose=0,true=24,retain=2
 if strpos(uname[0],'Darwin') ge 0 then device,decompose=0,true=24,retain=2
-
 end
+
