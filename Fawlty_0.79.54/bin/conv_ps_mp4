@@ -10,6 +10,9 @@ echo ''
 echo ''
 echo ''
 echo ''
+echo '--------------------------------------'
+echo 'Please wait for this terminal to close'
+echo '--------------------------------------'
 parallel mogrify -rotate 270 -density 300 -format png ::: *.ps;
 ffmpeg -i %4d.png -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" movie.mov;
 rm -rf *.png;
@@ -25,7 +28,4 @@ echo ''
 echo ''
 echo ''
 echo ''
-echo         '-------------------------------------------'
-echo         'Movie Generated - Press Enter To Continue'
-echo         '-------------------------------------------'
-read ans
+
