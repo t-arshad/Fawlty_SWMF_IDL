@@ -58,15 +58,15 @@ pro make_movie
 
 common animate_param
 
-;loadct,40
+
 
 spawn,'mkdir Movie'
 cd, 'Movie' 
 spawn, 'rm -rf *'
 cd, '..'  
-savemovie='ps'
+;savemovie='ps'
 animate_data
-savemovie='n'
+;savemovie='n'
 cd, 'Movie'
 spawn, 'cp ~/Apps/Fawlty*/Fawlty*/bin/conv_ps_mp4 ./'
 spawn, 'gnome-terminal -- ./conv_ps_mp4'
@@ -86,5 +86,5 @@ spawn,'uname',uname
 if strpos(uname[0],'IRIX')  ge 0 then device,retain=2,pseudo_color=8
 if strpos(uname[0],'Linux') ge 0 then device,decompose=0,true=24,retain=2
 if strpos(uname[0],'Darwin') ge 0 then device,decompose=0,true=24,retain=2
-;loadct,39
+
 end
