@@ -5,7 +5,7 @@ cd, '~/Apps/Fawlty*/Fawlty*/bin'
 cd, olddir
 filename='*.outs'
 showmovie='n'
-loadct, 39
+loadct, 40
 plotmode='contbargrid'
 
 
