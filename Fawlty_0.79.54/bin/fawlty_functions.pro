@@ -6,7 +6,7 @@ spawn,'mkdir Movie'
 cd, 'Movie' 
 spawn, 'rm -rf *'
 cd, '..'
-IF (quality EQ 0) THEN BEGIN 
+IF (quality EQ 0) OR (quality EQ -1) THEN BEGIN 
 savemovie='ps'
 END
 IF (quality EQ 1) THEN BEGIN 
@@ -15,9 +15,16 @@ END
 animate_data
 savemovie='n'
 cd, 'Movie'
+IF (quality EQ 0) OR (quality EQ 1) THEN BEGIN 
 spawn, 'cp ~/Apps/Fawlty*/Fawlty*/bin/conv_ps_mp4 ./'
 spawn, 'gnome-terminal -- ./conv_ps_mp4'
 spawn, 'rm -rf conv_ps_mp4'
+END
+IF (quality EQ -1) THEN BEGIN 
+spawn, 'cp ~/Apps/Fawlty*/Fawlty*/bin/conv_ps_pdf ./'
+spawn, 'gnome-terminal -- ./conv_ps_pdf'
+spawn, 'rm -rf conv_ps_pdf'
+END
 cd, '..'
 spawn, 'echo '
 spawn, 'echo '

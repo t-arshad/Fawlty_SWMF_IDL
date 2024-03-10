@@ -1,0 +1,32 @@
+rm -rf *.pdf;
+echo ''
+echo ''
+echo ''
+echo ''
+echo '----------'
+echo 'Making PDF'
+echo '----------'
+echo ''
+echo ''
+echo ''
+echo ''
+echo '--------------------------------------'
+echo 'Please wait for this terminal to close'
+echo '--------------------------------------'
+parallel mogrify -rotate 270 -density 300 -format pdf ::: *.ps;
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=temp.pdff *.pdf;
+rm -rf *.pdf;
+rm -rf *.ps;
+mv ./temp.pdff ./PDF.pdf
+echo ''
+echo ''
+echo ''
+echo ''
+echo '-------------'
+echo '    Done'
+echo '-------------'
+echo ''
+echo ''
+echo ''
+echo ''
+
